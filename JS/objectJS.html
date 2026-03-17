@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object In JS</title>
+</head>
+<body>
+    <script>
+        // Object - Collection(pair) of keys(properties) and its value
+        // Object is a reference type data type in JS and it is mutable in memory
+        // Object can be created in two ways - literal way and new keyword
+        // Object can have any data type as its value and it can also have a function as its value
+        // Object can also have another object as its value and it is called nested object
+        // Create an Object using  literal way and new keyword 
+
+        let student = {
+            name:"John",
+            age:23,
+            isMarried:false,
+            address:{
+                area:"Indirapuram",
+                pincode:201014,
+                city:"GZB"
+
+            },
+            education:["10th" , "12th", "Btech"],
+            degree:"B Tech",
+            branch:"CSE",
+            year:2025,
+            getInfo:function() {
+                return "My Cirrent Address Is " + student.degree;
+            }
+        };
+    // access abject's keys using dot notation
+    console.log(student.adress.pincode);
+    console.log(student.education);
+    console.log(typeof(student));
+
+    // find keys in object 
+    console.log('name' in student);
+    // delete keys from object 
+    console.log(delete student.name);
+    console.log(student);
+
+    // Find Length of Objects
+    let keyLength=Object.keys(student);
+    cinsole.log(keysLength.length);
+    // Iterate Keys Of Object
+    for(let x in student) {
+        console.log(student[x]);
+    }
+    // create object using new keyword
+    let myInfo= new Object();
+    myInfo.age=23;
+    myInfo.address="Delhi-21";
+    myInfo.isMarried=false;
+    console.log(myInfo);
+    console.log(typeof(myInfo));
+    </script>
+    
+</body>
+</html>
